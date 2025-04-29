@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form input,
+  form select,
+  form button,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+  }
+  
+  form textarea {
+    height: 80px;
+    resize: vertical;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form select {
+    background-color: #f9f9f9;
+  }
+  
+  form input[type="text"]:focus,
+  form input[type="number"]:focus,
+  form input[type="email"]:focus,
+  form select:focus,
+  form textarea:focus {
+    border-color: #202020;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  form button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 15px;
+  }
+  
+  form button:hover {
+    background-color: #2980b9;
+  }
+  
+  ul#movieList {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .movie {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 6px solid transparent;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .movie:hover {
+    transform: translateY(-5px);
+  }
+  
+  .movie.watched {
+    border-color: #2ecc71;
+  }
+  
+  .movie.planned {
+    border-color: #95a5a6;
+  }
+  
+  .movie span {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .movie small {
+    display: block;
+    margin-top: 8px;
+    color: #7f8c8d;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 15px;
+    }
+  
+    form {
+      padding: 15px;
+    }
+  
+    form input,
+    form select,
+    form button,
+    form textarea {
+      padding: 10px;
+      font-size: 0.95em;
+    }
+  }
+  

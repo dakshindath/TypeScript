@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Movie Watchlist</h1>
+
+  <form id="movieForm">
+    <input id="title" placeholder="Movie Title" required />
+    <textarea  id="description" placeholder="Short description (optional)"></textarea>
+    <select id="genre">
+      <option value="Action">Action</option>
+      <option value="Drama">Drama</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Horror">Horror</option>
+    </select>
+    <input id="rating" type="number" step="0.1" placeholder="Rating (optional)" />
+    <select id="status">
+      <option value="Planned">Planned</option>
+      <option value="Watched">Watched</option>
+    </select>
+    <button type="submit">Add Movie</button>
+  </form>
+
+  <h2>Movies</h2>
+  <ul id="movieList"></ul>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
