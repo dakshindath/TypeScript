@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Processor</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Payment Processor</h1>
+
+      <form id="paymentForm">
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select id="paymentMethod">
+          <option value="" disabled selected>Select a payment method</option>
+          <option value="Card">Card</option>
+          <option value="UPI">UPI</option>
+          <option value="NetBanking">NetBanking</option>
+        </select>
+
+        <div id="cardFields" class="payment-fields hidden">
+          <label for="cardNumber">Card Number:</label>
+          <input type="text" id="cardNumber" placeholder="1234-5678-9123-4567" />
+          <label for="expiryDate">Expiry Date:</label>
+          <input type="text" id="expiryDate" placeholder="MM/YY" />
+          <label for="amount">Amount:</label>
+          <input type="number" id="amountCard" placeholder="Enter amount" />
+        </div>
+
+        <div id="upiFields" class="payment-fields hidden">
+          <label for="upiId">UPI ID:</label>
+          <input type="text" id="upiId" placeholder="user@upi" />
+          <label for="amount">Amount:</label>
+          <input type="number" id="amountUpi" placeholder="Enter amount" />
+        </div>
+
+        <div id="netBankingFields" class="payment-fields hidden">
+          <label for="bankName">Bank Name:</label>
+          <input type="text" id="bankName" placeholder="Bank Name" />
+          <label for="accountNumber">Account Number:</label>
+          <input type="text" id="accountNumber" placeholder="Account Number" />
+          <label for="amount">Amount:</label>
+          <input type="number" id="amountBank" placeholder="Enter amount" />
+        </div>
+
+        <button type="submit" class="hidden">Submit Payment</button>
+      </form>
+
+      <div class="tabs">
+        <button class="tab-button" data-category="card">Card Payments</button>
+        <button class="tab-button" data-category="upi">UPI Payments</button>
+        <button class="tab-button" data-category="netBanking">Bank Payments</button>
+      </div>
+
+      <div id="detailsContainer">
+        <div id="cardDetails" class="tab-content hidden"></div>
+        <div id="upiDetails" class="tab-content hidden"></div>
+        <div id="netBankingDetails" class="tab-content hidden"></div>
+      </div>
+
+      <template id="cardTemplate">
+        <div class="payment-item">
+          <p><strong>Transaction ID:</strong> <span class="transaction-id"></span></p>
+          <p><strong>Amount:</strong> <span class="amount"></span></p>
+          <p><strong>Card Number:</strong> **** **** **** <span class="card-number"></span></p>
+          <p><strong>Expiry Date:</strong> <span class="expiry-date"></span></p>
+          <p><strong>Timestamp:</strong> <span class="timestamp"></span></p>
+        </div>
+      </template>
+
+      <template id="upiTemplate">
+        <div class="payment-item">
+          <p><strong>Transaction ID:</strong> <span class="transaction-id"></span></p>
+          <p><strong>Amount:</strong> <span class="amount"></span></p>
+          <p><strong>UPI ID:</strong> <span class="upi-id"></span></p>
+          <p><strong>Timestamp:</strong> <span class="timestamp"></span></p>
+        </div>
+      </template>
+
+      <template id="bankTemplate">
+        <div class="payment-item">
+          <p><strong>Transaction ID:</strong> <span class="transaction-id"></span></p>
+          <p><strong>Amount:</strong> <span class="amount"></span></p>
+          <p><strong>Bank Name:</strong> <span class="bank-name"></span></p>
+          <p><strong>Account Number:</strong> ****<span class="account-number"></span></p>
+          <p><strong>Timestamp:</strong> <span class="timestamp"></span></p>
+        </div>
+      </template>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

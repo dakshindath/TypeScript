@@ -1,0 +1,170 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #0077cc;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus, select:focus, button:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 3px #0077cc;
+  }
+  
+  select {
+    cursor: pointer;
+  }
+  
+  #amountCard, #amountBank, #amountUpi {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #fefdf0;
+    border-color: #e7d997;
+  }
+
+  button {
+    margin-top: 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+    transform: scale(1.02);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .tab-button {
+    flex: 1;
+    max-width: 200px;
+    padding: 12px;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f7f9fc;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .tab-button.active {
+    background-color: #0077cc;
+    color: white;
+    border-color: #0077cc;
+  }
+  
+  .tab-button:hover {
+    background-color: #d9eaf8;
+    transform: scale(1.05);
+  }
+ 
+  .tab-content {
+    margin-top: 30px;
+    display: none;
+  }
+  
+  .tab-content:not(.hidden) {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .payment-item {
+    border: 1px solid #e1e5eb;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9fbfd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .payment-item p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+  
+  .payment-item p strong {
+    color: #0077cc;
+  }
+  
+  .payment-fields.hidden, button[type="submit"].hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        margin: 20px;
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .tab-button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
