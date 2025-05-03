@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Search Dashboard</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Enter your search query..."
+        />
+        <ul id="suggestionsList" class="suggestions hidden"></ul>
+      </div>
+
+      <div class="view-toggle">
+        <button id="listViewButton" class="view-button active">
+          List View
+        </button>
+        <button id="gridViewButton" class="view-button">Grid View</button>
+        <button id="tableViewButton" class="view-button">Table View</button>
+      </div>
+
+      <ul id="resultsList" class="list-view"></ul>
+      <div id="resultsGrid" class="grid-view hidden"></div>
+      <table id="resultsTable" class="table-view hidden">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>ZIP</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <template id="listItemTemplate">
+        <li class="list-item">
+          <strong>Name:</strong> <span class="name"></span>,
+          <strong>City:</strong> <span class="city"></span>,
+          <strong>ZIP:</strong> <span class="zip"></span>
+        </li>
+      </template>
+
+      <template id="gridItemTemplate">
+        <div class="grid-item">
+          <p><strong>Name:</strong> <span class="name"></span></p>
+          <p><strong>City:</strong> <span class="city"></span></p>
+          <p><strong>ZIP:</strong> <span class="zip"></span></p>
+        </div>
+      </template>
+
+      <template id="tableRowTemplate">
+        <tr>
+          <td class="name"></td>
+          <td class="city"></td>
+          <td class="zip"></td>
+        </tr>
+      </template>
+    </div>
+
+    <script src="dashboard.js" defer></script>
+  </body>
+</html>
