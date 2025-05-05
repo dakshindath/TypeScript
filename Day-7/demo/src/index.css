@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Add a subtle gradient overlay to body */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(30, 30, 60, 0.5) 0%, rgba(10, 10, 30, 0.8) 70%, rgba(0, 0, 10, 1) 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Improve canvas quality with smoother transitions */
+canvas {
+  transition: opacity 0.5s ease-in-out;
+  will-change: transform;
+  isolation: isolate;
+}

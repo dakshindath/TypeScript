@@ -20,6 +20,11 @@ const items = [
     { id: 3, name: 'Alice Johnson', address: { city: 'Chicago', zip: '60601' } },
     { id: 4, name: 'Bob Brown', address: { city: 'Houston', zip: '77001' } },
     { id: 5, name: 'Charlie White', address: { city: 'Phoenix', zip: '85001' } },
+    { id: 6, name: 'Kane', address: { city: 'New York', zip: '10008' } },
+    { id: 7, name: 'Tiffany', address: { city: 'Los Angeles', zip: '90004' } },
+    { id: 8, name: 'Bridgette Smith', address: { city: 'Chicago', zip: '60702' } },
+    { id: 9, name: 'Catherine', address: { city: 'Houston', zip: '77801' } },
+    { id: 10, name: 'Rebecca', address: { city: 'Phoenix', zip: '85401' } },
 ];
 // DOM Elements
 const searchInput = document.getElementById('searchInput');
